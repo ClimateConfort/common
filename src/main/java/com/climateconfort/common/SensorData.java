@@ -1,14 +1,19 @@
 package com.climateconfort.common;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
-@Getter
 @AllArgsConstructor
-public class SensorData {
+@Getter
+@Setter
+public class SensorData implements Serializable {
     private long unixTime;
-    private long buildingId;
     private long roomId;
+    private long buildingId;
+    private long clientId;
     private float temperature;
     private float lightLevel;
     private float airQuality;
